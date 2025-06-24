@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название Кофейни | Главная</title>
+    <title>Kaffeebar | Startseite</title>
+    <meta name="description" content="Gemütliches Café: frischer Kaffee, Gebäck, angenehme Atmosphäre. Der beste Kaffee der Stadt! Adresse, Speisekarte, Kontakt.">
+    <meta name="keywords" content="café, kaffeebar, kaffee, gebäck, speisekarte, gemütlich, desserts, tee, bester kaffee, café in der stadt">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="loader" class="loader-wrapper">
+    <div class="loader"></div>
+</div>
     <header>
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Логотип кофейни">
+                <img src="images/logo.png" alt="Kaffeebar-Logo: Kaffeetasse und Name">
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="menu.html">Меню</a></li>
-                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="menu.html">Speisekarte</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -27,31 +32,38 @@
 
     <main>
         <section class="hero">
-            <h1>Добро пожаловать в нашу кофейню</h1>
-            <p>Насладитесь лучшим кофе в городе</p>
-            <a href="menu.html" class="btn">Посмотреть меню</a>
+            <h1>Willkommen in unserer Kaffeebar</h1>
+            <p>Genießen Sie den besten Kaffee der Stadt</p>
+            <a href="menu.html" class="btn">Speisekarte ansehen</a>
         </section>
 
         <section class="about">
-            <h2>Наша история</h2>
-            <p>Наша кофейня — это уютное место, где каждый гость может насладиться ароматным кофе, свежей выпечкой и приятной атмосферой. Мы ценим качество, заботимся о каждом посетителе и создаём пространство для встреч, вдохновения и отдыха.</p>
+            <h2>Unsere Geschichte</h2>
+            <p>Unsere Kaffeebar ist ein gemütlicher Ort, an dem jeder Gast aromatischen Kaffee, frisches Gebäck und eine angenehme Atmosphäre genießen kann. Wir legen Wert auf Qualität, kümmern uns um jeden Besucher und schaffen einen Raum für Begegnungen, Inspiration und Entspannung.</p>
             <div class="gallery">
-                <img src="images/coffee-1.jpg" alt="Интерьер">
-                <img src="images/coffee-2.jpg" alt="Процесс приготовления">
+                <img src="images/coffee-1.jpg" alt="Innenraum der Kaffeebar: gemütlicher Saal mit Kaffeeduft, Tische und Gäste">
+                <img src="images/coffee-2.jpg" alt="Barista bereitet Kaffee an der Theke zu, Zubereitungsprozess">
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2023 Название Кофейни</p>
+        <p>© 2023 Kaffeebar</p>
     </footer>
 
-    <!-- Модальное окно для увеличения фото -->
+    <!-- Modal für Bildvergrößerung -->
     <div id="image-modal" class="image-modal">
         <span class="image-modal-close">&times;</span>
-        <img class="image-modal-content" id="modal-img" src="" alt="Увеличенное фото">
+        <img class="image-modal-content" id="modal-img" src="" alt="Vergrößertes Bild der Kaffeebar oder eines Getränks, Detailansicht">
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+    // Loader: nach vollständigem Laden ausblenden
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        if(loader) loader.classList.add('hide');
+    });
+    </script>
 </body>
 </html>

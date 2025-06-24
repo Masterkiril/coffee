@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты | Кофейня</title>
+    <title>Kontakt | Kaffeebar</title>
+    <meta name="description" content="Kontakt der Kaffeebar: Adresse, Telefon, Kontaktformular. Kontaktieren Sie uns für Bestellungen oder Fragen.">
+    <meta name="keywords" content="kaffeebar, kontakt, adresse, telefon, kontaktformular, schreiben, kaffee bestellen, café">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contacts.css">
 </head>
 <body>
+<div id="loader" class="loader-wrapper">
+    <div class="loader"></div>
+</div>
 <header>
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Логотип кофейни">
+                <img src="images/logo.png" alt="Kaffeebar-Logo: Kaffeetasse und Name">
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="menu.html">Меню</a></li>
-                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="menu.html">Speisekarte</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -27,25 +32,32 @@
     </header>
 <main>
         <section class="contacts">
-            <h2>Контакты</h2>
+            <h2>Kontakt</h2>
             <div class="contact-info">
-                <p>Адрес: ул. Кофейная, 123</p>
-                <p>Телефон: +7 (000) 000-0000</p>
+                <p>Adresse: Kaffeegasse 123</p>
+                <p>Telefon: +49 (000) 000-0000</p>
             </div>
             <form class="contact-form" id="feedbackForm">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Телефон">
-                <textarea name="message" placeholder="Ваше сообщение"></textarea>
-                <button type="submit">Отправить</button>
+                <input type="text" name="name" placeholder="Ihr Name" required>
+                <input type="email" name="email" placeholder="E-Mail" required>
+                <input type="tel" name="phone" placeholder="Telefon">
+                <textarea name="message" placeholder="Ihre Nachricht"></textarea>
+                <button type="submit">Senden</button>
                 <div class="form-status"></div>
             </form>
         </section>
     </main>
     <footer>
-        <p>© 2023 Название Кофейни</p>
+        <p>© 2023 Kaffeebar</p>
     </footer>
     <script src="js/form-validation.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    // Loader: nach vollständigem Laden ausblenden
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        if(loader) loader.classList.add('hide');
+    });
+    </script>
 </body>
 </html>
